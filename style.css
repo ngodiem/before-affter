@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item {
+	font-size: 150px;
+	position: relative;
+}
+
+
+.item::before {
+	position: absolute;
+	font-size: 150px;
+	color: red;
+	content: "item";
+}
+
+.item::after {
+	font-size: 50px;
+	color: green;
+	content: "start";
+}
+
+.item:hover::before {
+	color: aqua;
+}
+
+.hinh {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-image: url(hinh1.jpg);
+}
+
+.hinh:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-image: url(hinh2.jpg);
+}
